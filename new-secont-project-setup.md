@@ -92,6 +92,8 @@ DB_PASSWORD=root_password
 
 ```bash
 composer install
+//or
+composer update --ignore-platform-reqs
 php artisan key:generate
 npm install
 npm run dev
@@ -165,6 +167,7 @@ sudo systemctl reload nginx
 ## **Step 6: Verify Permissions**
 
 ```bash
+sudo chown -R $USER:www-data /var/www/app_name
 sudo chown -R www-data:www-data /var/www/test-app2 
 sudo chmod -R 775 /var/www/test-app2/storage /var/www/test-app2/bootstrap/cache
 ```
